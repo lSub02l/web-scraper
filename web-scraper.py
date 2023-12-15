@@ -19,8 +19,8 @@ worksheet = sh.sheet1
 # Saving data 
 row = 1
 for listing in listings:
-    address = listing.find_element_by_class_name("propertyAddress").text.strip()
-    price = listing.find_element_by_class_name("rentPrice").text.strip()
+    address = listing.find_element_by_class_name("propertyAddress")
+    price = listing.find_element_by_class_name("rentPrice")
 
     worksheet.update(f'A{row}', address)
     worksheet.update(f'B{row}', price)
