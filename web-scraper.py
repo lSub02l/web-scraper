@@ -9,7 +9,7 @@ url = "https://www.apartments.com/new-york-ny/800-to-2500/"
 driver.get(url)
 
 # Downloading elements
-listings = driver.find_elements
+listings = driver.find_elements_by_class_name("name")
 
 # Google sheets init
 gc = gspread.service_account(filename=AUTH_KEY)
